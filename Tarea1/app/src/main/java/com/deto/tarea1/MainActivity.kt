@@ -29,7 +29,6 @@ class MainActivity : ComponentActivity() {
                             name = "Android",
                             modifier = Modifier.padding(innerPadding)
                         )
-
                         Mensaje1()
                         Mensaje2()
                         Mensaje3("Jorge")
