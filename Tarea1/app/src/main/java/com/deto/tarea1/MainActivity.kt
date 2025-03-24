@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,6 +13,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.deto.tarea1.ui.theme.Tarea1Theme
@@ -32,6 +34,10 @@ class MainActivity : ComponentActivity() {
                         Mensaje1()
                         Mensaje2()
                         Mensaje3("Jorge")
+
+                        Imagen1()
+                        Imagen2()
+                        Imagen3()
                     }
 
 
@@ -75,6 +81,24 @@ fun Mensaje3( name: String ,modifier: Modifier = Modifier ){
     )
 
     Log.d("Mensajes", "Mensaje 3 desplegado")
+}
+
+@Composable
+fun Imagen1(){
+    Image(painter = painterResource(id = R.drawable.gato), contentDescription = "gato")
+    Log.d("Imagenes", "Imagen del gato mostrada")
+}
+
+@Composable
+fun Imagen2(){
+    Image(painter = painterResource(id = R.drawable.perro), contentDescription = "perro")
+    Log.d("Imagenes", "Imagen del perro mostrada")
+}
+
+@Composable
+fun Imagen3(){
+    Image(painter = painterResource(id = R.drawable.gallinas), contentDescription = "gallinas")
+    Log.d("Imagenes", "Imagen de las gallinas mostrada")
 }
 
 @Composable
